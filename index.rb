@@ -34,13 +34,16 @@ puts findMax(array)
 one_array = [:donald, :seven, :minnie]
 two_array = ['duck', 'dwarfs', 'mouse']
 def combine(one_array, two_array)
-	# for i in 0...one_array.length
-	# one_array[i] = two_array[i]
+	combined = Hash.new
+	for i in 0...one_array.length
+		combined[one_array[i]] = two_array[i]
+	end
+	combined
 
-
-	Hash[one_array.zip(two_array)]
+# 	# Hash[one_array.zip(two_array)]
 end
 puts combine(one_array, two_array)
+
  
 
 # Write a program that prints the numbers from 1 to 100, except:
